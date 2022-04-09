@@ -6,7 +6,7 @@ import { Card } from 'react-native-paper';
 import { styles } from './styles';
 
 export default function AsteroidDetails({ route }: AsteroidDetailsProp) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([] as any);
   const { item } = route.params;
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function AsteroidDetails({ route }: AsteroidDetailsProp) {
     getAsteroidData(item)
       .then((res) => {
         console.log(res);
-        setData(res)
+        setData([res])
 
       })
       .catch((err) => {

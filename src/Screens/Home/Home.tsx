@@ -4,7 +4,7 @@ import { styles } from './styles';
 import CustomInput from '../../Components/CustomTxtInput'
 import CustomBtn from '../../Components/CustomBtn'
 import { homeProps } from '../../Navigation/types';
-import { getAsteroidData, getRandomAsteroid } from '../../Services';
+import {  getRandomAsteroid } from '../../Services';
 
 export default function Home({ navigation }: homeProps) {
     const [value, setValue] = useState<string>('');

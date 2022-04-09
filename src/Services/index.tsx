@@ -8,10 +8,10 @@ export const getAsteroidData = async (asteroid: string | any) : Promise<any> => 
         const url = `${ASTEROIDAPI}${asteroid}/?api_key=${API_KEY}`
         const resp = await axios.get(url)
         if(resp.status !== 200){
-            throw new Error("Something went wrong")
+            throw new Error("Something Wrong")
         }
         const data = await resp.data;
-        return [data];
+        return data;
     }
     catch(err){
         throw err
@@ -24,7 +24,7 @@ export const getRandomAsteroid =  async () : Promise<any> => {
         const url = `${RANDOMAPI}${API_KEY}`
         const resp = await axios.get(url)
         if(resp.status !== 200){
-            throw new Error("Something went wrong")
+            throw new Error("Something Wrong")
         }
         const data = await resp.data;
         return [data]
